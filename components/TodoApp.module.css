@@ -13,7 +13,7 @@
 .headerTitle {
   font-size: 28px;
   font-weight: 700;
-  color: #4a90d9;
+  color: #22c55e;
 }
 
 /* ========== Input Area ========== */
@@ -27,22 +27,28 @@
   flex: 1;
   padding: 12px 16px;
   font-size: 15px;
-  border: 2px solid #ddd;
+  border: 2px solid #333;
   border-radius: 8px;
   outline: none;
   transition: border-color 0.2s;
+  background: #16213e;
+  color: #4ade80;
+}
+
+.taskInput::placeholder {
+  color: #555;
 }
 
 .taskInput:focus {
-  border-color: #4a90d9;
+  border-color: #22c55e;
 }
 
 .addBtn {
   padding: 12px 20px;
   font-size: 15px;
   font-weight: 600;
-  color: #fff;
-  background: #4a90d9;
+  color: #1a1a2e;
+  background: #22c55e;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -51,11 +57,12 @@
 }
 
 .addBtn:hover:not(:disabled) {
-  background: #3a7bc8;
+  background: #16a34a;
 }
 
 .addBtn:disabled {
-  background: #b0c4de;
+  background: #1a4a2e;
+  color: #555;
   cursor: not-allowed;
 }
 
@@ -71,30 +78,30 @@
   font-size: 13px;
   font-weight: 600;
   color: #888;
-  background: #fff;
-  border: 2px solid #ddd;
+  background: #16213e;
+  border: 2px solid #333;
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .filterBtn:hover {
-  border-color: #4a90d9;
-  color: #4a90d9;
+  border-color: #22c55e;
+  color: #22c55e;
 }
 
 .filterBtnActive {
-  background: #4a90d9;
-  border-color: #4a90d9;
-  color: #fff;
+  background: #22c55e;
+  border-color: #22c55e;
+  color: #1a1a2e;
 }
 
 /* ========== Task List ========== */
 .taskList {
   list-style: none;
-  background: #fff;
+  background: #16213e;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   margin-bottom: 16px;
 }
@@ -103,7 +110,7 @@
   display: block;
   text-align: center;
   padding: 32px 16px;
-  color: #bbb;
+  color: #555;
   font-size: 14px;
 }
 
@@ -112,7 +119,7 @@
   align-items: center;
   gap: 12px;
   padding: 14px 16px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #1a1a2e;
   transition: background 0.15s;
 }
 
@@ -121,16 +128,16 @@
 }
 
 .taskItem:hover {
-  background: #fafafa;
+  background: #1a2744;
 }
 
 /* Check button */
 .taskCheck {
   width: 22px;
   height: 22px;
-  border: 2px solid #ccc;
+  border: 2px solid #555;
   border-radius: 50%;
-  background: #fff;
+  background: transparent;
   cursor: pointer;
   transition: all 0.2s;
   flex-shrink: 0;
@@ -140,19 +147,19 @@
 }
 
 .taskCheck:hover {
-  border-color: #4a90d9;
+  border-color: #22c55e;
 }
 
 .taskCheckCompleted {
-  background: #4a90d9;
-  border-color: #4a90d9;
+  background: #22c55e;
+  border-color: #22c55e;
 }
 
 .taskCheckCompleted::after {
   content: "";
   width: 6px;
   height: 10px;
-  border: solid #fff;
+  border: solid #1a1a2e;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
   margin-bottom: 2px;
@@ -164,11 +171,12 @@
   font-size: 15px;
   line-height: 1.4;
   word-break: break-word;
+  color: #4ade80;
 }
 
 .taskTextCompleted {
   text-decoration: line-through;
-  color: #b0b0b0;
+  color: #555;
 }
 
 /* Delete button */
@@ -180,7 +188,7 @@
   background: transparent;
   cursor: pointer;
   font-size: 16px;
-  color: #ccc;
+  color: #555;
   transition: all 0.2s;
   flex-shrink: 0;
   display: flex;
@@ -189,7 +197,7 @@
 }
 
 .taskDelete:hover {
-  background: #fee;
+  background: #3a1a1a;
   color: #e74c3c;
 }
 
@@ -210,7 +218,7 @@
   font-size: 13px;
   color: #888;
   background: transparent;
-  border: 1px solid #ddd;
+  border: 1px solid #333;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s;
