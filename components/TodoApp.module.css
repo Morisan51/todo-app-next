@@ -1,0 +1,222 @@
+/* ========== Container ========== */
+.container {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* ========== Header ========== */
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.headerTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4a90d9;
+}
+
+/* ========== Input Area ========== */
+.inputArea {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.taskInput {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.taskInput:focus {
+  border-color: #4a90d9;
+}
+
+.addBtn {
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: #4a90d9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.addBtn:hover:not(:disabled) {
+  background: #3a7bc8;
+}
+
+.addBtn:disabled {
+  background: #b0c4de;
+  cursor: not-allowed;
+}
+
+/* ========== Filters ========== */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filterBtn {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filterBtn:hover {
+  border-color: #4a90d9;
+  color: #4a90d9;
+}
+
+.filterBtnActive {
+  background: #4a90d9;
+  border-color: #4a90d9;
+  color: #fff;
+}
+
+/* ========== Task List ========== */
+.taskList {
+  list-style: none;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.emptyMessage {
+  display: block;
+  text-align: center;
+  padding: 32px 16px;
+  color: #bbb;
+  font-size: 14px;
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.15s;
+}
+
+.taskItem:last-child {
+  border-bottom: none;
+}
+
+.taskItem:hover {
+  background: #fafafa;
+}
+
+/* Check button */
+.taskCheck {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taskCheck:hover {
+  border-color: #4a90d9;
+}
+
+.taskCheckCompleted {
+  background: #4a90d9;
+  border-color: #4a90d9;
+}
+
+.taskCheckCompleted::after {
+  content: "";
+  width: 6px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+/* Task text */
+.taskText {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.taskTextCompleted {
+  text-decoration: line-through;
+  color: #b0b0b0;
+}
+
+/* Delete button */
+.taskDelete {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ccc;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taskDelete:hover {
+  background: #fee;
+  color: #e74c3c;
+}
+
+/* ========== Footer ========== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskCount {
+  font-size: 13px;
+  color: #888;
+}
+
+.clearCompletedBtn {
+  padding: 6px 14px;
+  font-size: 13px;
+  color: #888;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clearCompletedBtn:hover {
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
